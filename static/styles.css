@@ -1,0 +1,40 @@
+
+h1,h2,h3,h4,h5{
+    color: #ADCF9F;
+    font-family: 'Montserrat', sans-serif;
+}
+h6{
+    color:#76BA99;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+.title_text{
+    padding: 7% 15%;
+}
+.big-heading{
+  
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color:#76BA99;
+    margin-top: 50px;
+    
+}
+
+.colored-section{
+    background-color:#fefcfa;
+    color: #fff;
+}
+
+
+.btn{
+    color: #ADCF9F;
+}
+.select_animal{
+    text-align: left;
+}
+.download-button{
+    margin: 0% 11% 5% 0;
+}
+

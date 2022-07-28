@@ -1,0 +1,122 @@
+{%  extends "nov.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %} hii yossef  {% endblock %}
+
+
+</head>
+<body>
+    {% block content %}
+     
+    <section class="colored-section" id="title">
+        <div class="title_text">
+       <div class="row ">
+        <div class="col-lg-6 ">     
+        <h1 class="big-heading">Welcome to the zoo.</h1>
+        </div>
+        <table >
+     
+            <tr  >
+                <td><h2 id="demo">your animal is :</h2></td>
+                <td><h2 id="demo_food">animal food is :</h2></td>
+            </tr>
+            <tr>
+                <td><h4>select animal</h4></td>
+                <td><h4>animal food</h4></td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <select id="animal" class="btn btn-success  download-button"  onchange="select_animal()"> 
+                    
+                    <option value="lion" >moshe</option>
+                    <option value="camel" >moshe</option>
+                    <option value="elephant" >moshe</option>
+
+                    
+                </select>
+
+            </td>
+                <td>
+                    <select id="food" class="btn btn-success  download-button"  onchange="select_food()"> 
+                    
+                        <option id="1" ></option>
+                        <option id="2" ></option>
+                        <option id="3" ></option>
+                    </select>
+                </td>
+            </tr>
+            <tr  >
+                
+                <td><h6>when you finished click here</h6> 
+                    <button type="button" class="btn btn-success" onclick="feed_animal()">Success</button>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+  
+        </div>
+    </div> 
+           
+     
+             <script>
+               
+                  function feed_animal(){
+                    var name =  document.getElementById("animal").value;
+                    name = JSON.stringify(name);
+                    
+                  }
+
+
+
+                    function select_food(){
+                        var food11 =
+                     document.getElementById("food").value;
+                     document.getElementById("demo_food").innerHTML = "animal food is : " + food11;
+                    }
+
+                 function select_animal(){
+                     var animal =
+ 
+                     document.getElementById("animal").value;
+                     document.getElementById("demo").innerHTML = "your animal is : " + animal;
+                    
+                     switch (animal) {
+                    case 'lion':
+                    document.getElementById("1").innerHTML = "steak";
+                    document.getElementById("2").innerHTML = "chicken";
+                    document.getElementById("3").innerHTML = "zebra";
+                        break;
+                    case 'camel':
+                    document.getElementById("1").innerHTML = "water";
+                    document.getElementById("2").innerHTML = "weeds";
+                    document.getElementById("3").innerHTML = "leaves";
+                        break;
+                     case 'elephant':
+                     document.getElementById("1").innerHTML = "fruit";
+                    document.getElementById("2").innerHTML = "water";
+                    document.getElementById("3").innerHTML = "weeds";
+                        break; 
+                    default:
+                        text = "No value found";
+                    }
+                   
+                 }
+                
+    
+
+                          
+
+             </script>
+       
+      <br>
+<!-- Example single danger button -->
+
+  
+    </section>
+  
+    {% endblock %}
+</body>
+</html>
